@@ -44,6 +44,9 @@ jobs:
           cp dist/index.html dist/confirmar-email/index.html
           cp dist/index.html dist/historico/index.html
           cp dist/index.html dist/redefinir-senha/index.html
+          mkdir -p dist/oauth/start dist/oauth/callback
+          cp dist/index.html dist/oauth/start/index.html
+          cp dist/index.html dist/oauth/callback/index.html
           rsync -a --exclude='*.html' public/ dist/
           touch dist/.nojekyll
         env:
